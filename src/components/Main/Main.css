@@ -1,0 +1,115 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 0 100px 3px rgba(0,0,0,0.7) inset;
+  background: 85% 100% url('./bg_desktop.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 40px;
+  user-select: none;
+}
+
+.main__title,
+.main__subtitle {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-in-out forwards;
+  background: linear-gradient(to bottom, #3498db 50%, #FFD700 50%);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 1px rgba(255,255,255,0.2);
+  -webkit-text-stroke: 2px rgba(0,0,0,0.24);
+  transition: 0.3s;
+  opacity: 0;
+}
+.main__title.active,
+.main__subtitle.active {
+  opacity: 1;
+}
+.main__title {
+  margin: 100px 0;
+  font-size: calc(15px + 7vmin);
+  text-align: center;
+  animation-delay: 0.5s;
+}
+.main__subtitle {
+  animation-delay: 1.5s;
+  margin-top: 20px;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.main__subtitle.subtitle__author-name {
+  font-size: calc(30px + 5vmin);
+}
+
+.main__author-img {
+  animation: glitch 0.8s infinite;
+  position: absolute;
+  z-index: 0;
+  top: 90px;
+  left: 20px;
+  max-height: calc(100vh - 100px);
+  max-width: calc(100% - 40px);
+  border-radius: 10px;
+  box-shadow: 0 0 30px 5px rgba(0,0,0,0.4);
+  transition: 0.2s;
+  cursor: pointer;
+  
+}
+.main__author-img:active {
+  top: 92px;
+}
+
+.main__author-img:hover {
+  z-index: 1;
+  box-shadow: 0 0 30px 5px rgba(255,255,255,0.15);
+}
+
+
+
+@media (max-width: 600px) {
+  .main__title {
+    margin: 120px 0 40px;
+    font-size: calc(15px + 5vmin);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Початковий стан: невидимий та зсунутий вниз */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Завершальний стан: видимий та без зсуву */
+  }
+}
+
+@keyframes glitch {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 0.8;
+    transform: translateX(-5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translateX(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,35 @@
+.likes {
+  width: 100%;
+  padding: 0 20px;
+  min-height: 100vh;
+  background: url('bg_hobbies.jpg') 30% 30%;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.44);
+  background-size: cover;
+  box-shadow: 0 0 30px 10px rgba(33,33,33,0.8) inset;
+}
+.likes__title {
+  margin: 0;
+  font-size: calc(10px + 7vmin);
+  text-align: center;
+  -webkit-text-stroke: 2px rgba(0,0,0,0.24);
+  background: linear-gradient(to bottom, #ff9a8b, #fad02e);
+  background-clip: text;
+  color: transparent;
+}
+
+.likes__list {
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+}
+.likes__item {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.24);
+  letter-spacing: 1px;
+  line-height: 125%;
+}
+.likes__item:nth-child(2n - 1) {
+  color: white;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.80);
+  text-align: right;
+}

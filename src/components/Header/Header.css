@@ -1,0 +1,103 @@
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  background-color: rgba(33,33,33,0.40);
+}
+
+.header__logotype {
+  height: 100%;
+}
+
+.header__logo-img {
+  background: rgba(255,215,255,0.1);
+  border: 5px double gold;
+  box-shadow: 0 0 12px 0 white inset;
+  border-radius: 10px;
+  max-height: 100%;
+  margin-right: 15px;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  background: linear-gradient(to bottom left, #3498db 50%, #FFD700 50%);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(0,0,0,0.24);
+}
+.header__title:hover {
+  color: #282c34;
+}
+
+.header__navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #282c34;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.header__navigation.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header__icon-menu {
+  width: 45px;
+  height: 35px;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__icon-menu:hover::before,
+.header__icon-menu:hover::after,
+.header__icon-menu:hover span {
+  background-color: white;
+  box-shadow: 0 0 25px 0 rgba(255,255,255,0.9);
+}
+.header__icon-menu span {
+  width: 100%;
+  height: 2.4px;
+  background-color: rgba(255,255,255,0.8);
+}
+.header__icon-menu::before,
+.header__icon-menu::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.8);
+  transform-origin: 100% 0;
+  transition: 0.3s;
+}
+.header__icon-menu.active::before {
+  transform: rotate(-45deg);
+}
+.header__icon-menu.active::after {
+  transform: rotate(45deg);
+}
+.header__icon-menu.active span {
+  opacity: 0;
+}
+.header__icon-menu::before {
+  top: 0;
+}
+.header__icon-menu::after {
+  bottom: 0;
+}
