@@ -9,8 +9,7 @@
   box-shadow: 0 0 30px 10px rgba(33,33,33,0.8) inset;
 }
 .likes__title {
-  margin: 0;
-  font-size: calc(10px + 7vmin);
+  /* font-size: calc(10px + 7vmin); */
   text-align: center;
   -webkit-text-stroke: 2px rgba(0,0,0,0.24);
   background: linear-gradient(to bottom, #ff9a8b, #fad02e);

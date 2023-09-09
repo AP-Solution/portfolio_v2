@@ -3,34 +3,72 @@
   font-family: Ubuntu, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
 }
 
-.music {
-  width: 100%;
-  min-height: 100vh;
-  background: url('bg1.jpg') 45% 50%;
-  background-size: cover;
+.about {
+  background: linear-gradient(to right, #673ab7, #512da8);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.music__wrapper {
-  width: 100%;
+.about__image {
   min-height: 100vh;
-  background: linear-gradient(to right, rgba(81,45,168,0.4), rgba(103,58,183,0.1));
+  background: url('me.jpg') 50% 60%;
+  background-size: cover;
   backdrop-filter: blur(4px);
+  position: relative;
 }
-.music__title {
-  font-size: calc(10px + 7vmin);
-  text-align: center;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.24);
+
+.about__text {
   color: white;
-  height: 80px;
-  margin: 0;
+  text-shadow: 0 0 3px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.test-field {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: calc(20px + 10vmin);
+  animation: scaling;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+@media (max-width: 500px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__text {
+    position: absolute;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@keyframes scaling {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
 }
