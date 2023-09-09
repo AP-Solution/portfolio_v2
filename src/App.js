@@ -14,7 +14,7 @@ function App() {
       <Router>
       <Header isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
         <Routes>
-          <Route path="/" element={<Main/>} />
+          <Route exact path="/" element={<Main/>} />
           <Route path="/workshop" element={<div className="test-field">Workshop</div>} />
           <Route path="/gallery" element={<div className="test-field">Gallery</div>} />
           <Route path="/contacts" element={<div className="test-field">Contacts</div>} />
