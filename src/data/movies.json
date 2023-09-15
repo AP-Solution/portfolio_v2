@@ -1,8 +1,40 @@
 [
   {
+    "title": "Бійцівський клуб",
+    "year": 1999,
+    "genre": ["Драма", "Психологічний триллер"],
+    "actors": ["Едвард Нортон", "Бред Пітт", "Гелена Бонем Картер"],
+    "duration": 120,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BODQ0OWJiMzktYjNlYi00MzcwLThlZWMtMzRkYTY4ZDgxNzgxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+  },
+  {
+    "title": "Хітмен",
+    "year": 2007,
+    "genre": ["Бойовик"],
+    "actors": ["Тімоті Оліфант", "Ольга Куриленко", "Дугрей Скотт", "Роберт Неппер"],
+    "duration": 93,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BMDlmMmZhZjQtZDhlMi00MzU0LWIwYjMtNDRhOGE5YzczYjBmXkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_.jpg"
+  },
+  {
+    "title": "Містер Бін",
+    "year": 1997,
+    "genre": ["Комедія"],
+    "actors": ["Роуен Аткінсон"],
+    "duration": 121,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BYjU2YzY5NDEtM2M3NC00NGM0LTg3MmItNWQ1OWY2ZmNkZTU0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_.jpg"
+  },
+  {
+    "title": "Темний лицар",
+    "year": 2008,
+    "genre": ["Бойовик", "Фантастика", "Драма"],
+    "actors": ["Крістіан Бейл", "Гіт Леджер", "Аарон Екгарт", "Меггі Джилленгол"],
+    "duration": 152,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
     "title": "Еффект Метелика",
     "year": 2004,
-    "genre": ["Драма", "Психологічний триллер"],
+    "genre": ["Драма", "Психологічний триллер", "Фантастика"],
     "actors": ["Ештон Катчер", "Емі Смарт"],
     "duration": 120,
     "preview_image": "https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"
