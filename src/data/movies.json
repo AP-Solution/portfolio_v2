@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Еффект Метелика",
+    "year": 2004,
+    "genre": ["Драма", "Психологічний триллер"],
+    "actors": ["Ештон Катчер", "Емі Смарт"],
+    "duration": 120,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"
+  },
+  {
+    "title": "Той, що біжить по лезу 2049",
+    "year": 2017,
+    "genre": ["Фантастика", "Бойовик"],
+    "actors": ["Раян Гослінг", "Харрісон Форд", "Джаред Лето", "Ана де Армас"],
+    "duration": 163,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "title": "Шрек",
+    "year": 2001,
+    "genre": ["Комедія", "Мультфільм"],
+    "actors": ["Майк Маєрс", "Кемерон Діас", "Едді Мерфі", "Джон Лізгоу"],
+    "duration": 90,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+  },
+  {
+    "title": "Безславні виродки",
+    "year": 2001,
+    "genre": ["Пригоди", "Бойовик", "Драма"],
+    "actors": ["Бред Пітт", "Мелані Лоран", "Тіль Швайгер", "Крістоф Вальц", "Аугуст Діль"],
+    "duration": 153,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "title": "Карти, гроші, два стволи",
+    "year": 1998,
+    "genre": ["Пригоди", "Бойовик", "Комедія"],
+    "actors": ["Джейсон Флемінг", "Джейсон Стейтем", "Нік Моран", "Вінні Джонс", "Вес Блеквуд"],
+    "duration": 105,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BMTAyN2JmZmEtNjAyMy00NzYwLThmY2MtYWQ3OGNhNjExMmM4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg"
+  },
+  {
+    "title": "На голці",
+    "year": 1996,
+    "genre": ["Драма", "Кримінал", "Комедія"],
+    "actors": ["Юен Макгрегор", "Джонні Лі Міллер", "Роберт Карлайл", "Юен Бремнер", "Кевін Маккід"],
+    "duration": 94,
+    "preview_image": "https://ae01.alicdn.com/kf/Ha0aef69ae31d454d8cd659aa582d428e6/Trainspotting-Nostalgia-Film-Classic-Hollywood-Movie-Kraft-Paper-Wall-Stickers-Bar-Retro-Poster-Decorative-Painting.jpg"
+  },
+  {
+    "title": "Десяте королівство",
+    "year": 2000,
+    "genre": ["Фентезі", "Пригоди"],
+    "actors": ["Кімберлі Уільямс", "Джон Ларрокетт", "Скотт Коен", "Деніел Лапейн", "Дайян Уіст", "Рутгер Хауер", "Роберт Харді"],
+    "duration": 417,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BYmE5YmM1ODItODBmYy00Y2QwLTg3ZTYtMzJmMjM3ZDFmMzgzXkEyXkFqcGdeQXVyMTUyNjc3NDQ4._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "title": "Хто я",
+    "year": 2014,
+    "genre": ["Триллер"],
+    "actors": ["Том Шиллінг", "Тріне Дюрхольм", "Еліас МБарек"],
+    "duration": 102,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BYmRiYjQ0OGQtYTAzMi00OGVjLWE4YTQtM2Q4YjBlZTBhMWM5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg"
+  },
+  {
+    "title": "Ангел-А",
+    "year": 2005,
+    "genre": ["Мелодрама", "Нуар"],
+    "actors": ["Рі Расмуссен", "Жамель Деббуз", "Жильбер Малкі"],
+    "duration": 88,
+    "preview_image": "https://images6.fanpop.com/image/photos/41500000/Angel-A-luc-besson-41588290-842-1200.jpg"
+  },
+  {
+    "title": "Реквієм за мрією",
+    "year": 2000,
+    "genre": ["Психологічна драма"],
+    "actors": ["Еллен Бьорстін", "Джаред Лето", "Дженіфер Конеллі", "Марлон Уаянс"],
+    "duration": 97,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"
+  }
+]

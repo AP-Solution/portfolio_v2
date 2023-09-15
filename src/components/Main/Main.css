@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   box-shadow: 0 0 100px 3px rgba(0,0,0,0.7) inset;
-  background: 85% 100% url('./bg_desktop.jpg');
+  background: 85% 100% url('../../images/bg_desktop.jpg');
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0,0,0,0.5);

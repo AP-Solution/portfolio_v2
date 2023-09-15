@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
 import './Header.css';
+import avatar from '../../images/ava.png';
 
 export const Header = ({ isMenuActive, setIsMenuActive }) => {
   return (
     <header className="header">
       <div className="header__logotype">
-        <img src="./img/ava.png" alt="img source" className="header__logo-img" />
+        <img src={avatar} alt="img source" className="header__logo-img" />
       </div>
 
       <div className="header__title">

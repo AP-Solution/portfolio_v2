@@ -1,15 +1,14 @@
 .services {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(33,33,33);
+  background-color: #333;
   color: white;
-  /* border: 2px solid red; */
   padding-bottom: 40px;
 }
 
 .services__title {
   text-align: center;
-  font-size: calc(10px + 7vmin);
+  font-size: 2rem;
 }
 
 .services__wrapper {
@@ -44,7 +43,7 @@
 }
 .technologies__case {
   text-align: center;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   padding: 16px;
 }
 .technologies__case:hover img {

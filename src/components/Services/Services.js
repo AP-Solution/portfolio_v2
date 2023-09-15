@@ -1,5 +1,15 @@
 import React from 'react';
 import './Services.css';
+import photoEditing from "../../images/services__photo-editing.png";
+import dataAnalisys from "../../images/services__data-analisys.png";
+import websiteDeveloping from "../../images/services__website-developing.png";
+
+import reactIcon from "../../images/icon__react.png";
+import jsIcon from "../../images/icon__js.png";
+import nodeIcon from "../../images/icon__node.png";
+import htmlIcon from "../../images/icon__html5.png";
+import cssIcon from "../../images/icon__css3.png";
+import sqlIcon from "../../images/icon__mysql.png";
 
 export const Services = () => {
   return (
@@ -10,32 +20,32 @@ export const Services = () => {
 
       <div className="technologies__wrapper">
         <div className="technologies__case">
-          <img src="./img/icon__react.png" alt="123" />
+          <img src={reactIcon} alt="123" />
           <h4 className="technologies__case-title">React JS</h4>
         </div>
 
         <div className="technologies__case">
-          <img src="./img/icon__js.png" alt="123" />
+          <img src={jsIcon} alt="123" />
           <h4 className="technologies__case-title">JavaScript</h4>
         </div>
 
         <div className="technologies__case">
-          <img src="./img/icon__node.png" alt="123" />
+          <img src={nodeIcon} alt="123" />
           <h4 className="technologies__case-title">Node JS</h4>
         </div>
 
         <div className="technologies__case">
-          <img src="./img/icon__html5.png" alt="123" />
+          <img src={htmlIcon} alt="123" />
           <h4 className="technologies__case-title">HTML 5</h4>
         </div>
 
         <div className="technologies__case">
-          <img src="./img/icon__css3.png" alt="123" />
+          <img src={cssIcon} alt="123" />
           <h4 className="technologies__case-title">CSS 3</h4>
         </div>
 
         <div className="technologies__case">
-          <img src="./img/icon__mysql.png" alt="123" />
+          <img src={sqlIcon} alt="123" />
           <h4 className="technologies__case-title">MySQL</h4>
         </div>
       </div>
@@ -44,7 +54,7 @@ export const Services = () => {
 
       <div className="services__wrapper">
         <div className="services__case">
-          <img src="./img/services__development.png" alt="123" />
+          <img src={websiteDeveloping} alt="123" />
 
           <h4 className="services__case-title">
             Розробка веб-сайтів та додатків
@@ -52,7 +62,7 @@ export const Services = () => {
         </div>
 
         <div className="services__case">
-          <img src="./img/photo-editing.png" alt="123" />
+          <img src={photoEditing} alt="123" />
 
           <h4 className="services__case-title">
             Обробка та редагування фото
@@ -60,7 +70,7 @@ export const Services = () => {
         </div>
 
         <div className="services__case">
-          <img src="./img/services__data-analisys.png" alt="123" />
+          <img src={dataAnalisys} alt="123" />
 
           <h4 className="services__case-title">
             Аналіз даних, робота з файлами

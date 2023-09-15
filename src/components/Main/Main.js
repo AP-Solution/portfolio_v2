@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Main.css';
+import authorImage from '../../images/a.jpeg';
 
 export const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +20,7 @@ export const Main = () => {
       </h2>
 
       <img
-        src="./img/author.jpeg"
+        src={authorImage}
         alt="author"
         className="main__author-img"
         onClick={() => setIsModalOpen(!isModalOpen)}

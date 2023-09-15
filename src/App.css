@@ -50,6 +50,57 @@ html {
   animation-iteration-count: infinite;
 }
 
+.movies {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #999, #183);
+}
+
+.movies__select {
+  border: 2px solid red;
+  padding: 10px;
+  margin: auto;
+}
+
+.movies__wrapper {
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.movies__item {
+  border: 2px solid rgba(0,0,0,0.4);
+  list-style: none;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(3px);
+}
+
+.movie__image {
+  max-height: 100vh;
+  max-width: 100%;
+  margin-bottom: auto;
+}
+
+.movie__title {
+  text-align: center;
+}
+
+.search__wrapper {
+  display: flex;
+  padding: 0 20px;
+  border: 2px solid red;
+  width: 100%;
+}
+.search__input {
+  border: none;
+  font-size: 22px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
 
 @media (max-width: 500px) {
   .about {
