@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Marquee from 'react-double-marquee';
 import './App.css';
 import { Main } from './components/Main/Main';
 import { Header } from './components/Header/Header';
 import { Services } from './components/Services/Services';
 import { Movies } from './components/Movies/Movies';
+import { Workshop } from './components/Workshop';
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [fetchedProducts, setFetchedProducts] = useState([]);
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(products => setFetchedProducts(products))
-  }, []);
 
   return (
     <div className="App">
@@ -22,32 +17,22 @@ function App() {
         <Header isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route path="/workshop" element={<div className="test-field">Workshop</div>} />
+          <Route path="/workshop" element={<Workshop />} />
           <Route path="/gallery" element={<div className="test-field">Gallery</div>} />
           <Route path="/contacts" element={<div className="test-field">Contacts</div>} />
           <Route path="/blog" element={<div className="test-field">Blog</div>} />
         </Routes>
       </Router>
-      <section className="store">
-        <h2 className="store__title">Віртуальний інтернет-магазин</h2>
-        <div className="store__wrapper">
-          <ul className="store__list">
-            {fetchedProducts.map(product => (
-               <li className="store__item" key={product.id}>
-               <div className="store__item-image">
-                 <img src={product.image} alt={product.title} />
-               </div>
-               
-               <h3>{product.title}</h3>
-               <p>Ціна: ${product.price}</p>
-               <p>Опис: {product.description}</p>
-               <p>Категорія: {product.category}</p>
-               <p>Рейтинг: {product.rating.rate}</p>
-             </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <div
+      style={{
+        width: '100%',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      <Marquee direction="left">
+        Сайт в процесі розробки! Якщо ви побачили щось дивне чи не працююче - не лякайтеся, це не надовго 😉
+      </Marquee>
+    </div>
       <Services />
       <Movies />
       <section className="about">
