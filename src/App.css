@@ -52,51 +52,7 @@ html {
 }
 
 
-.store {
-  min-height: 100vh;
-  background-color: #444;
-  padding: 10px;
-}
-.store__wrapper {
-  width: 100%;
-  min-height: 70vh;
-  /* border: 2px solid gold; */
-}
-.store__title {
-  text-align: center;
-  color: white;
-  text-shadow: 0 0 3px black;
-}
-.store__list {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.store__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  border: 2px solid grey;
-  border-radius: 5px;
-  background-color: rgba(255,255,255,0.24);
-  color: rgba(255,255,255,0.7);
-  padding: 10px;
-}
-.store__item:hover {
-  color: white;
-}
-.store__item-image {
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid blue;
-}
-.store__item-image img {
-  max-width: 100%;
-}
+
 
 
 @media (max-width: 500px) {

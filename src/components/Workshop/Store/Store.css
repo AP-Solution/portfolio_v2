@@ -1,0 +1,87 @@
+.store {
+  min-height: 100vh;
+  background-color: #444;
+  padding: 10px;
+}
+.store__wrapper {
+  width: 100%;
+  min-height: 70vh;
+  /* border: 2px solid gold; */
+}
+.store__title {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px black;
+}
+.store__list {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.store__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.24);
+  color: rgba(255,255,255,0.7);
+  padding: 10px;
+}
+.store__item:hover {
+  color: white;
+}
+.store__item-image {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
+}
+.store__item-image img {
+  max-width: 100%;
+}
+.store__item-settings {
+  /* border: 2px solid red; */
+  margin-top: auto;
+}
+.store__count-wrapper {
+  width: 100%;
+  min-height: 50px;
+  margin: auto 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.store__count-input {
+  text-align: center;
+}
+.store__count-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey
+}
+.store__count-button {
+  /* border: 2px solid blue; */
+}
+.store__count-total {
+  /* border: 2px solid blue; */
+  color: green;
+  text-align: center;
+  padding: 0 0 10px;
+}
+.store__button-buy {
+  margin: 10px 0 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; /* Заборонити відступи від стрілок */
+  text-align: center;
+}

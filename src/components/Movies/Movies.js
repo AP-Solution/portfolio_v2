@@ -7,7 +7,7 @@ export const Movies = () => {
   const [visibleMovies, setVisibleMovies] = useState(movies);
   return (
     <section className="movies">
-        <h2 className="movies__title">Підбірка фільмів</h2>
+        <h2 className="movies__title">Добірка фільмів</h2>
         <select
           className="movies__select"
           onChange={(e) => {
