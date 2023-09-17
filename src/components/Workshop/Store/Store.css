@@ -68,7 +68,8 @@
 }
 .store__count-total {
   /* border: 2px solid blue; */
-  color: green;
+  color: gold;
+  text-shadow: 0 0 5px black;
   text-align: center;
   padding: 0 0 10px;
 }
