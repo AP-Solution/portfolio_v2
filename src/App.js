@@ -7,6 +7,7 @@ import { Header } from './components/Header/Header';
 import { Services } from './components/Services/Services';
 import { Movies } from './components/Movies/Movies';
 import { Workshop } from './components/Workshop';
+import ContactForm from './components/ContactForm';
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -18,9 +19,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/workshop" element={<Workshop />} />
-          <Route path="/gallery" element={<div className="test-field">Gallery</div>} />
+          <Route path="/gallery" element={<span className="loader"></span>} />
           <Route path="/contacts" element={<div className="test-field">Contacts</div>} />
-          <Route path="/blog" element={<div className="test-field">Blog</div>} />
+          <Route path="/blog" element={<ContactForm />} />
         </Routes>
       </Router>
       <div

@@ -43,23 +43,26 @@ export const Store = () => {
 
   useEffect(() => {
     updateTotalPriceFromStorage();
-  }, [fetchedProducts]);
+  });
 
   return (
     <section className="store">
       <h2 className="store__title">Віртуальний інтернет-магазин</h2>
-      <div className="store__wrapper">
-        <ul className="store__list">
-          {fetchedProducts.map((product) => (
-            <StoreItem
-              product={product}
-              updateTotalPrice={updateTotalPrice}
-              key={product.id}
-            />
-          ))}
-        </ul>
-        <div>Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
-      </div>
+      <span className="loader"></span>
+      {fetchedProducts && (
+        <div className="store__wrapper">
+          <ul className="store__list">
+            {fetchedProducts.map((product) => (
+              <StoreItem
+                product={product}
+                updateTotalPrice={updateTotalPrice}
+                key={product.id}
+              />
+            ))}
+          </ul>
+          <div>Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
+        </div>
+      )}
     </section>
   );
 }
