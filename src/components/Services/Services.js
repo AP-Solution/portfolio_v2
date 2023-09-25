@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from "react-slick";
-import './Services.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -17,6 +16,10 @@ import cssIcon from "../../images/icon__css3.png";
 import sqlIcon from "../../images/icon__mysql.png";
 import gitIcon from "../../images/icon__git.png";
 import tailwindIcon from "../../images/icon__tailwind.png";
+import chatgptIcon from "../../images/icon__chatgpt.png";
+import soverflowIcon from "../../images/icon__soverflow.png";
+import pinterestIcon from "../../images/icon__pinterest.png";
+import instagramIcon from "../../images/icon__instagram.png";
 
 export const Services = () => {
 
@@ -42,8 +45,8 @@ export const Services = () => {
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 500,
+    autoplaySpeed: 2000,
+    speed: 2000,
     slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "linear",
@@ -64,9 +67,9 @@ export const Services = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white min-h-screen py-16">
-      <h2 className="text-4xl text-center mb-8">Чим я користуюся:</h2>
-      <div className="">
+    <section className="text-white min-h-screen px-4">
+      <h2 className="text-4xl text-center mb-8">Мій стек технологій:</h2>
+      <div className="px-10">
         <Slider {...settings}>
           {techStack.map(item => (
             <div key={item.alt} className="text-center">
@@ -78,7 +81,7 @@ export const Services = () => {
 
       </div>
 
-      <h2 className="text-4xl text-center mt-12 mb-8">Що роблю:</h2>
+      <h2 className="text-4xl text-center mt-12 mb-8">Що я роблю:</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map(service => (
           <div key={service.alt} className={`bg-gradient-to-r ${service.bgColor} rounded-lg p-8 text-center hover:from-pink-500 hover:to-yellow-500`}>
@@ -87,6 +90,29 @@ export const Services = () => {
           </div>
         ))}
       </div>
+
+      <div className="bg-gray-900 p-8 rounded-xl shadow-lg mt-12">
+        <h2 className="text-4xl text-center text-white mt-12 mb-8">Якими сервісами користуюся:</h2>
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="flex flex-col items-center">
+            <img src={chatgptIcon} alt="chatgpt" className="w-32 mx-auto mb-4" />
+            <p className="text-white text-lg">ChatGPT</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={soverflowIcon} alt="stack overflow" className="w-32 mx-auto mb-4" />
+            <p className="text-white text-lg">Stack Overflow</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={pinterestIcon} alt="pinterest" className="w-32 mx-auto mb-4" />
+            <p className="text-white text-lg">Pinterest</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={instagramIcon} alt="instagram" className="w-32 mx-auto mb-4" />
+            <p className="text-white text-lg">Instagram</p>
+          </div>
+        </div>
+      </div>
+
     </section>
   )
 }

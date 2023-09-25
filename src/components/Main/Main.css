@@ -1,6 +1,6 @@
 .main {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   box-shadow: 0 0 100px 3px rgba(0,0,0,0.7) inset;
   background: 85% 100% url('../../images/bg_desktop.jpg');
   background-size: cover;
@@ -55,16 +55,13 @@
   z-index: 0;
   top: 90px;
   left: 20px;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 140px);
   max-width: calc(100% - 40px);
   border-radius: 10px;
   box-shadow: 0 0 30px 5px rgba(0,0,0,0.4);
   transition: 0.2s;
   cursor: pointer;
   
-}
-.main__author-img:active {
-  top: 92px;
 }
 
 .main__author-img:hover {
@@ -78,7 +75,7 @@
 .modal {
   width: 100%;
   margin: 80px 0 0;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 120px);
   background-color: rgba(0,0,0,0.95);
   position: absolute;
   z-index: 2;
@@ -90,7 +87,7 @@
 .modal__wrapper {
   width: 95%;
   min-height: 80vh;
-  padding: 20px;
+  padding: 30px;
   background-color: rgba(255,255,255,0.2);
   border-radius: 10px;
   backdrop-filter: blur(3px);
@@ -98,6 +95,7 @@
 
 .modal__title {
   text-align: center;
+  font-size: calc(10px + 4vmin);
 }
 
 .modal__content p {
@@ -113,8 +111,8 @@
   width: 50px;
   height: 38.5px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background-color: transparent;
 }
 .modal__close::before,
@@ -140,12 +138,46 @@
   
 }
 
+.about {
+  background: linear-gradient(to right, #673ab7, #512da8);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about__image {
+  min-height: 100vh;
+  background: url('../../images/me.jpg') 50% 60%;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+.about__text {
+  color: white;
+  text-shadow: 0 0 3px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main__title {
     margin: 120px 0 40px;
     font-size: calc(15px + 5vmin);
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__text {
+    position: absolute;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.4);
   }
 }
 
