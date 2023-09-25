@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 * {
   box-sizing: border-box;
   font-family: Ubuntu, sans-serif;
@@ -16,6 +19,7 @@ html {
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
+  padding-top: 120px;
 }
 
 .about {

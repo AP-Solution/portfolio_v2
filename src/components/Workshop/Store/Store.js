@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './Store.css';
 import { StoreItem } from './StoreItem';
 
 export const Store = () => {
@@ -43,15 +42,15 @@ export const Store = () => {
 
   useEffect(() => {
     updateTotalPriceFromStorage();
-  });
+  }, []);
 
   return (
-    <section className="store">
-      <h2 className="store__title">Віртуальний інтернет-магазин</h2>
+    <section className="min-h-screen bg-gray-700 p-10">
+      <h2 className="text-4xl text-center text-white mb-8">Віртуальний інтернет-магазин</h2>
       <span className="loader"></span>
       {fetchedProducts && (
-        <div className="store__wrapper">
-          <ul className="store__list">
+        <div className="flex flex-col">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {fetchedProducts.map((product) => (
               <StoreItem
                 product={product}
@@ -60,9 +59,9 @@ export const Store = () => {
               />
             ))}
           </ul>
-          <div>Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
+          <div className="mt-4 text-center text-white">Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
         </div>
       )}
     </section>
   );
-}
+};

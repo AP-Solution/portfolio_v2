@@ -1,48 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Marquee from 'react-double-marquee';
 import './App.css';
 import { Main } from './components/Main/Main';
 import { Header } from './components/Header/Header';
-import { Services } from './components/Services/Services';
 import { Movies } from './components/Movies/Movies';
 import { Workshop } from './components/Workshop';
 import ContactForm from './components/ContactForm';
+import { Accordion } from './components/Accordion/Accordion';
+import { Counter } from './components/Counter/Counter';
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   return (
-    <div className="App">
+    <div className="App bg-gray-900">
       <Router>
         <Header isMenuActive={isMenuActive} setIsMenuActive={setIsMenuActive} />
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/workshop" element={<Workshop />} />
-          <Route path="/gallery" element={<span className="loader"></span>} />
-          <Route path="/contacts" element={<div className="test-field">Contacts</div>} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/contacts" element={<Accordion />} />
           <Route path="/blog" element={<ContactForm />} />
         </Routes>
       </Router>
-      <div
-      style={{
-        width: '100%',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      <Marquee direction="left">
-      🧐 Сайт в процесі розробки! Деякі частини можуть відображатися некорректно, а функції працювати дивакувато. Тримаю в курсі, ці явища тимчасові 👨‍💻
-      </Marquee>
-    </div>
-      <Services />
-      <Movies />
-      <section className="about">
-        <div className="about__image"></div>
-        <div className="about__text">
-          <h2>Трохи про мене</h2>
-          <p>Ваш текст тут...</p>
-        </div>
-      </section>
+      
+      
+      <Counter />
     </div>
   );
 }

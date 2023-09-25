@@ -1,4 +1,4 @@
-.services {
+/* .services {
   width: 100%;
   min-height: 100vh;
   background-color: #333;
@@ -43,7 +43,6 @@
 }
 .technologies__case {
   text-align: center;
-  /* border: 1px solid grey; */
   padding: 16px;
 }
 .technologies__case:hover img {
@@ -79,4 +78,13 @@
   100% {
     transform: scale(1.15);
   }
+} */
+
+
+.slick-dots li button:before {
+  color: white;
 }
+
+/* .slick-dots li.slick-active button:before {
+  color: white;
+} */

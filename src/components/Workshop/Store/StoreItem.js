@@ -37,33 +37,46 @@ export const StoreItem = ({ product, updateTotalPrice }) => {
   return (
     <li className="store__item" key={product.id}>
       <div className="store__item-image">
-        <img src={product.image} alt={product.title} />
+        <img src={product.image} alt={product.title} className="max-w-full h-auto" />
       </div>
 
-      <h3>{product.title}</h3>
-      <p>Ціна: ₴{product.price}</p>
-      <p>Опис: {product.description}</p>
-      <p>Категорія: {product.category}</p>
-      <p>Рейтинг: {product.rating.rate}</p>
+      <h3 className="text-lg font-semibold">{product.title}</h3>
+      <p className="text-yellow-600">Ціна: ₴{product.price}</p>
+      <p className="text-gray-600">Опис: {product.description}</p>
+      <p className="text-gray-600">Категорія: {product.category}</p>
+      <p className="text-gray-600">Рейтинг: {product.rating.rate}</p>
       <div className="store__item-settings">
-        {count > 0 && (
-          <div className="store__count-total">Загалом: {(count * product.price).toFixed(2)} ₴</div>
-        )}
-        <div className="store__count-wrapper">
-          <button className="store__count-button" onClick={handleDecrement}>-</button>
-          <div className="store__count-output">
-            {count} шт
-          </div>
-          <button className="store__count-button" onClick={handleIncrement}>+</button>
+        <div className="flex items-center">
+          <button
+            className="store__count-button bg-red-500 text-white px-2 py-1 rounded-md w-1/2 mr-2"
+            onClick={handleDecrement}
+          >
+            -
+          </button>
+          <div className="store__count-output text-yellow-500 w-1/2 text-center">{count} шт</div>
+          <button
+            className="store__count-button bg-green-500 text-white px-2 py-1 rounded-md w-1/2 ml-2"
+            onClick={handleIncrement}
+          >
+            +
+          </button>
         </div>
 
-        <button className="store__button-buy" onClick={() => {
-          const cartObject = JSON.parse(localStorage.getItem('cartObject')) || [];
-          const { id } = product;
-          cartObject[id] = count;
-          localStorage.setItem('cartObject', JSON.stringify(cartObject))
-        }}>До кошика</button>
+        <button
+          className="store__button-buy bg-blue-500 text-white mt-2 px-4 py-2 rounded-md hover:bg-blue-600 w-full"
+          onClick={() => {
+            const cartObject = JSON.parse(localStorage.getItem('cartObject')) || [];
+            const { id } = product;
+            cartObject[id] = count;
+            localStorage.setItem('cartObject', JSON.stringify(cartObject));
+          }}
+        >
+          Замовити
+        </button>
+        {count > 0 && (
+          <div className="text-yellow-500 font-semibold">Загалом: ₴{(count * product.price).toFixed(2)}</div>
+        )}
       </div>
     </li>
   );
-}
+};

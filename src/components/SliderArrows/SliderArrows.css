@@ -1,0 +1,46 @@
+.arrow-prev,
+.arrow-next {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-prev:hover,
+.arrow-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow-prev:before,
+.arrow-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-prev:before {
+  content: '\2190'; /* Ліва стрілка */
+}
+
+.arrow-next:before {
+  content: '\2192'; /* Права стрілка */
+}
+
+.arrow-prev {
+  left: -40px;
+}
+
+.arrow-next {
+  right: -40px;
+}
