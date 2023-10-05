@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'animate.css/animate.min.css';
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -15,7 +17,7 @@ html {
 }
 
 .App {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);

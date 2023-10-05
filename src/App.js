@@ -24,8 +24,6 @@ function App() {
           <Route path="/blog" element={<ContactForm />} />
         </Routes>
       </Router>
-      
-      
       <Counter />
     </div>
   );

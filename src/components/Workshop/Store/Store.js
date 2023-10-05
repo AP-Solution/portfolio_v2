@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import styles from './Store.module.css';
 import { StoreItem } from './StoreItem';
 
 export const Store = () => {
   const [fetchedProducts, setFetchedProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const updateTotalPrice = () => {
+  const updateTotalPrice = (products = fetchedProducts) => {
     const cartObject = JSON.parse(localStorage.getItem('cartObject')) || {};
     let total = 0;
 
     for (const productId in cartObject) {
-      const product = fetchedProducts.find((p) => p.id === parseInt(productId));
+      const product = products.find(p => p.id === parseInt(productId));
 
       if (product) {
         total += product.price * cartObject[productId];
@@ -20,37 +21,21 @@ export const Store = () => {
     setTotalPrice(total);
   };
 
-  const updateTotalPriceFromStorage = () => {
-    const cartFromStorage = JSON.parse(localStorage.getItem('cartObject'));
-    let total = 0;
-
-    for (const productId in cartFromStorage) {
-      const product = fetchedProducts.find((p) => p.id === parseInt(productId));
-      if (product) {
-        total += product.price * cartFromStorage[productId];
-      }
-    }
-
-    setTotalPrice(total);
-  };
-
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((products) => setFetchedProducts(products));
-  }, []);
-
-  useEffect(() => {
-    updateTotalPriceFromStorage();
+      .then(res => res.json())
+      .then(products => {
+        setFetchedProducts(products);
+        updateTotalPrice(products);
+      });
   }, []);
 
   return (
-    <section className="min-h-screen bg-gray-700 p-10">
-      <h2 className="text-4xl text-center text-white mb-8">Віртуальний інтернет-магазин</h2>
-      <span className="loader"></span>
+    <section className={styles.store}>
+      <h2 className={styles.store__title}>Віртуальний інтернет-магазин</h2>
       {fetchedProducts && (
-        <div className="flex flex-col">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className={styles.store__wrapper}>
+          <ul className={styles.store__list}>
             {fetchedProducts.map((product) => (
               <StoreItem
                 product={product}
@@ -59,7 +44,7 @@ export const Store = () => {
               />
             ))}
           </ul>
-          <div className="mt-4 text-center text-white">Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
+          <div className="">Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
         </div>
       )}
     </section>

@@ -142,5 +142,13 @@
     "actors": ["Нік Робінсон", "Джейсон Кларк"],
     "duration": 112,
     "preview_image": "https://m.media-amazon.com/images/I/711Qsc8lxJL.jpg"
+  },
+  {
+    "title": "Достукатись до неба",
+    "year": 1997,
+    "genre": ["Трагікомедія", "Драма"],
+    "actors": ["Тіль Швайґер", "Ян Йозеф Ліферс", "Моріц Бляйбтрой", "Рутгер Гауер"],
+    "duration": 87,
+    "preview_image": "https://m.media-amazon.com/images/M/MV5BZDIxMWE2YTgtZDY3NS00OTE5LWFmNjEtZjIyYzlhN2ZjN2Y2XkEyXkFqcGdeQXVyNzMxMzQyNDE@._V1_FMjpg_UX1000_.jpg"
   }
 ]

@@ -69,7 +69,7 @@ export const Services = () => {
   return (
     <section className="text-white min-h-screen px-4">
       <h2 className="text-4xl text-center mb-8">Мій стек технологій:</h2>
-      <div className="px-10">
+      <div className="p-10 bg-gray-800 rounded-xl">
         <Slider {...settings}>
           {techStack.map(item => (
             <div key={item.alt} className="text-center">
@@ -91,7 +91,7 @@ export const Services = () => {
         ))}
       </div>
 
-      <div className="bg-gray-900 p-8 rounded-xl shadow-lg mt-12">
+      <div className="bg-gray-800 p-8 rounded-xl my-12">
         <h2 className="text-4xl text-center text-white mt-12 mb-8">Якими сервісами користуюся:</h2>
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="flex flex-col items-center">

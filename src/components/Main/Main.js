@@ -5,6 +5,39 @@ import { Services } from '../Services/Services';
 
 export const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [randomFact, setRandomFact] = useState('');
+
+  const facts = [
+    'Працював менеджером з продажів',
+    'Доставляв піцу',
+    'Вчився на будівельника',
+    'Жодного разу не був за кордоном',
+    'Їздив велосипедом більше 100км на день',
+    'Не маю домашніх тварин',
+    'Прокидаюся рано, лягаю спати пізно',
+    'Дивився не більше 10-х серіалів',
+    'Маю 5000+ ігрових годин у Dota2',
+    'Село люблю більше ніж місто',
+    'Інколи роблю зарядку',
+    'Слухаю дуже різну музику',
+    'Ненавиджу кацапів',
+    'Цікавлюся e-commerce сферою',
+    'Не користуюся парасолькою',
+    'Ремонтую велосипед власноруч',
+    'Готую смачну піцу',
+    'Рідко жаліюся на життя',
+    'Люблю експериментувати',
+    'Піднімався на Говерлу',
+    'Вірю в ЗСУ',
+    'Був наставником на різних роботах',
+    'Захоплююсь цифровим мистецтвом',
+    'Не маю аккаунту в TikTok'
+  ];
+
+  const updateRandomFact = () => {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    setRandomFact(facts[randomIndex]);
+};
 
   return (
     <>
@@ -51,8 +84,14 @@ export const Main = () => {
       <section className="about">
         <div className="about__image"></div>
         <div className="about__text">
-          <h2>Трохи про мене</h2>
-          <p>Ваш текст тут...</p>
+          <h2 className="about__title">Декілька рандомних фактів</h2>
+          <p className="about__description"> {randomFact} </p>
+          <button
+            className="about__update-button"
+            onClick={updateRandomFact}
+          >
+            Оновити
+          </button>
         </div>
       </section>
     </>
