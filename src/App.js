@@ -7,7 +7,6 @@ import { Movies } from './components/Movies/Movies';
 import { Workshop } from './components/Workshop';
 import ContactForm from './components/ContactForm';
 import { Accordion } from './components/Accordion/Accordion';
-import { Counter } from './components/Counter/Counter';
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -24,7 +23,6 @@ function App() {
           <Route path="/blog" element={<ContactForm />} />
         </Routes>
       </Router>
-      <Counter />
     </div>
   );
 }

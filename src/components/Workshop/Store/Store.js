@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import styles from './Store.module.css';
 import { StoreItem } from './StoreItem';
+import iconCart from '../../../images/icon__cart.png';
 
 export const Store = () => {
   const [fetchedProducts, setFetchedProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const updateTotalPrice = (products = fetchedProducts) => {
+  const updateTotalPrice = useCallback((products = fetchedProducts) => {
     const cartObject = JSON.parse(localStorage.getItem('cartObject')) || {};
     let total = 0;
-
+  
     for (const productId in cartObject) {
       const product = products.find(p => p.id === parseInt(productId));
-
+  
       if (product) {
         total += product.price * cartObject[productId];
       }
     }
-
+  
     setTotalPrice(total);
-  };
+  }, [fetchedProducts]);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -28,7 +29,7 @@ export const Store = () => {
         setFetchedProducts(products);
         updateTotalPrice(products);
       });
-  }, []);
+  }, [updateTotalPrice]);
 
   return (
     <section className={styles.store}>
@@ -44,9 +45,13 @@ export const Store = () => {
               />
             ))}
           </ul>
-          <div className="">Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
+          <div className={styles.store__total_price}>Загалом до сплати: {totalPrice.toFixed(2)} ₴</div>
         </div>
       )}
+
+      <div className={styles.button__purcache}>
+        <img src={iconCart} alt="" />
+      </div>
     </section>
   );
 };
