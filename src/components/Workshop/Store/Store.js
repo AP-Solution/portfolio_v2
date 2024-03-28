@@ -50,7 +50,7 @@ export const Store = () => {
       )}
 
       <div className={styles.button__purcache}>
-        <img src={iconCart} alt="" />
+        <img src={iconCart} alt="cart_icon" />
       </div>
     </section>
   );

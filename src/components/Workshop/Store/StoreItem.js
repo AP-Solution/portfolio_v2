@@ -3,7 +3,8 @@ import addToCartIcon from '../../../images/icon__add-to-cart.png';
 import styles from './Store.module.css';
 
 export const StoreItem = ({ product, updateTotalPrice }) => {
-  const initialCount = JSON.parse(localStorage.getItem('cartObject'))[product.id] || 0;
+  const cartObject = JSON.parse(localStorage.getItem('cartObject')) || {};
+const initialCount = cartObject[product.id] || 0;
   const [count, setCount] = useState(initialCount);
 
   const handleDecrement = () => {
@@ -33,10 +34,7 @@ export const StoreItem = ({ product, updateTotalPrice }) => {
         <img src={product.image} alt={product.title} className={styles.store__item_img} />
       </div>
       <h3 className={styles.store__item_title}>{product.title}</h3>
-      <p className={styles.store__item_price}>₴{product.price.toFixed(2)}</p> {/* Darkened the yellow for a richer appearance */}
-      {/* <p className="">Опис: {product.description}</p> */}
-      {/* <p className="">Категорія: {product.category}</p> */}
-      {/* <p className="">Рейтинг: {product.rating.rate}</p> */}
+      <p className={styles.store__item_price}>₴{product.price.toFixed(2)}</p>
       {count ? (
         <div className={styles.store__item_count}>
           <button className={styles.store__item_count_decrement} onClick={handleDecrement}>-</button>
